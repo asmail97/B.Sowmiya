@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class day {
+    public static void main(String[] args)
+    {
+
+/*Write a Java program that asks the user to enter the number of hours
+ they worked in a day and their hourly wage. Then calculate and display the total earnings for that day.*/
+      Scanner sc = new Scanner(System.in);
+      
+      System.out.print("Enter the hours worked today:");
+      int hours = sc.nextInt();
+
+      System.out.print("Enter the hours wage:");
+      double wage = sc.nextDouble();
+
+      double totalearning;
+      if(hours > 8)
+      {
+        int overtimehours = hours - 8;
+        totalearning = (8 * wage) + (overtimehours * wage * 1.5);
+      }
+      else 
+      {
+        totalearning = hours * wage;
+      }
+    
+      System.out.print("totalearning:" + totalearning);
+    }
+}
