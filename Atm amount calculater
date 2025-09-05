@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class atm {
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        double balance = 1000;
+
+        System.out.print("your starting amount is:₹" + balance);
+        double amount = sc.nextDouble();
+
+        System.out.print("Enter the deposit amount:₹");
+        double deposit = sc.nextDouble();
+        balance += deposit;
+
+        System.out.print("Balance after deposit:₹" + balance);
+        System.out.print("Enter amount to withdrawal: ₹");
+        double withdrawal = sc.nextDouble();
+
+        if(withdrawal <= balance)
+        {
+           balance -= withdrawal;
+           System.out.print("balance after the withdrawal: ₹" + balance);
+        }
+        else
+        {
+           System.out.println("Insufficient balance");
+        } 
+        System.out.print("Final balance: ₹" + balance);
+        }
+    }
