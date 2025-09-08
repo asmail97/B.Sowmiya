@@ -1,0 +1,23 @@
+public class maxno {
+    public static void main(String[] args)
+    {
+        int a = 10;
+        int b = 35;
+        max(a,b);
+    }
+    static void max(int a, int b)
+    {
+        if(a >= b)
+        {
+            System.out.print("A max");
+        }
+        else if(a <= b)
+        {
+            System.out.print("B max");
+        }
+        else
+        {
+            System.out.print(" ");
+        }
+    }
+}
