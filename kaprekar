@@ -1,0 +1,25 @@
+public class kaprekar {
+    public static void main(String[] args)
+    {
+        int a = 45;
+        int b = a * a; 
+        int temp = a;
+        int digits = 0;
+        while(temp!= 0)
+        {
+           int c = temp % 10;
+           digits++;
+           temp = temp/ 10;
+        }
+           int divisor = (int) Math.pow(10,digits);
+           int right = b % divisor;
+           int left = b / divisor;
+           if(left + right == a)
+           {
+             System.out.println("Kaprekar");
+           }
+           else{
+            System.out.print("Not Kaprekar");
+           }
+    }
+}
