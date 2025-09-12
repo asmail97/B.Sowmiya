@@ -1,0 +1,57 @@
+import java.util.Scanner;
+public class Security {
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your PASSKEY:");
+        String passkey = sc.nextLine();
+        //Upper -> 65 - 90
+        //Lower -> 97 - 122
+        //Digits -> 48 - 57
+
+        boolean hasUpper = false, hasLower = false, hasDigits = false, hasspecial = false;
+
+        if(passkey.length() >= 8)
+        {
+            for(int i = 0; i < passkey.length(); i++)
+            {
+                char ch = passkey.charAt(5);
+                int ascii = (int) ch;
+                if(ascii >= 65 && ascii <= 90)
+                {
+                    hasUpper = true;
+                }
+                else if(ascii >= 97 && ascii <= 122)
+                {
+                    hasLower = true;
+                }
+                else if(ascii >= 48 && ascii <= 57)
+                {
+                    hasDigits = true;
+                }
+                else
+                {
+                    hasspecial = true;
+                }
+            }
+
+                if(hasUpper && hasLower && hasDigits && hasspecial)
+                {
+                    System.out.print("passkey strengh: STRONG");
+                }
+                else if((hasUpper || hasLower) && (hasDigits || hasspecial))
+                {
+                    System.out.print("passkey strengh: MEDIUM");
+                }
+                else
+                {
+                    System.out.print("passkey strengh: WEAK");
+                }
+            }
+                else
+                {
+                    System.out.print("Passkey too short! must be at least 8 characters.");
+                }
+            }
+        }
+    
