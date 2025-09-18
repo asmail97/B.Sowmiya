@@ -1,0 +1,12 @@
+public class Third {
+    public static void main(String[] args)
+    {
+        int a = 10;
+        int b = 40;
+
+        a = a+b;//50
+        b = a-b;//10
+        a = a-b;//40
+        System.out.print(a+" "+b);
+    }
+}
