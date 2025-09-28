@@ -1,0 +1,28 @@
+ublic class EvenDigit {
+    public static int evendigit(int arr[])
+    {
+        //letcode 1295
+         int count = 0;
+      for(int i = 0; i < arr.length; i++)
+      {
+         int digit = 0;
+         while(arr[i] != 0)
+         {
+            arr[i] /= 10;
+            digit++;
+         }
+         if(digit % 2 == 0)
+         {
+            count++;
+         }
+      }
+      return count;
+    }
+    public static void main(String[] args)
+    {               
+        //            0  1   2   3  4
+        int arr[] = {12,345,3878,5,6897};
+        int s = evendigit(arr);
+        System.out.print(s);
+    }
+}
