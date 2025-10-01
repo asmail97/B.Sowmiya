@@ -1,0 +1,27 @@
+public class StringExpansion {
+    public static String expansionstr(String a)
+    {
+     StringBuilder sb = new StringBuilder();
+     for(int i = 0; i < a.length(); i++)
+     {
+        char c = a.charAt(i);
+        int count = 0;
+        while(i + 1 < a.length() && Character.isDigit(a.charAt(i + 1)))
+        {
+            count = count * 10 + (a.charAt(i + 1) - '0');
+            i++;
+        }
+        for(int j = 1; j <= count; j++)
+        {
+            sb.append(c);
+        }
+     }
+     return sb.toString();
+    }
+    public static void main(String[] args)
+    {
+        String a = "a6b3c3";
+        String ans = expansionstr(a);
+        System.out.print(ans);
+    }
+}
