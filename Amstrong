@@ -1,0 +1,25 @@
+public class Amstrong {
+    public static void main(String[] args)
+    {
+       // int temp;
+        int sum = 0;
+        int num = 153;
+        int originalnum = num;
+        while(num != 0)
+        {
+           int d = num % 10;
+           sum += (d*d*d);
+           num = num / 10;
+        }
+
+          if(originalnum == sum)
+          {
+            System.out.print("Amstrong no");
+          }  
+          else
+          {
+            System.out.print("Not Amstrong no");
+          }
+        
+    }
+}
