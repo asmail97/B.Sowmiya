@@ -1,0 +1,20 @@
+public class ValidParanthesis {
+   public static boolean valid(String a)
+   {
+      //Leetcode 20
+     while(a.length() != 0)
+     {
+        if(a.contains("()"))   a = a.replace("()", "");
+        else if(a.contains("[]"))   a = a.replace("[]", "");
+        else if(a.contains("{}"))   a = a.replace("{}", "");
+        else  return false;
+     }
+     return true;
+   } 
+   public static void main(String[] args)
+   {
+    String a = "{[()]}";
+    boolean ans = valid(a);
+    System.out.print(ans);
+   }
+}
